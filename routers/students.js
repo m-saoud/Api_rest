@@ -42,7 +42,7 @@ router.post("/", (request, response) => {
 router.patch("/:id", (request, response) => {
   id = request.params.id;
   const { name, grede } = request.body;
-  let student = student.find((student) => student.id === id);
+  const student = student.find((student) => student.id === id);
   if (name) {
     student.name = name;
   }
